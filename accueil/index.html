@@ -1,12 +1,10 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="../static/css/style.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -26,21 +24,21 @@
           ">
                 <div class="logo">
                     <a href="">
-                        <img src="{% static 'images/1.png' %}" alt="Pigier Côte d'Ivoire Logo" />
+                        <img src="../static/images/1.png" alt="Pigier Côte d'Ivoire Logo" />
                     </a>
                 </div>
                 <div class="title">Pigier<br />Côte d'Ivoire</div>
             </div>
             <span class="burger-img">
-                <img src="{% static 'images/menu.png' %}" alt="burger" />
+                <img src="../static/images/menu.png" alt="burger" />
             </span>
             <div class="menu hidden">
                 <span class="cross-img">
-                    <img src="{% static 'images/x-mark.png' %}" alt="cross" />
+                    <img src="../static/images/x-mark.png" alt="cross" />
                 </span>
                 <div class="menu-container">
                     <div class="menu-items">
-                        <a href="http://127.0.0.1:8000/" class="menu-items-link onhover">Accueil</a>
+                        <a href="" class="menu-items-link onhover">Accueil</a>
                     </div>
                     <div class="menu-items">
                         <a class="menu-items-link" style="cursor: pointer">Présentation</a>
@@ -103,7 +101,7 @@
                         </ul>
                     </div>
                     <div class="menu-items">
-                        <a href="#" class="menu-items-link onhover">Contact</a>
+                        <a href="../contact/index.html" class="menu-items-link onhover">Contact</a>
                     </div>
                 </div>
             </div>
@@ -122,8 +120,8 @@
 
     <div class="main">
         <div class="frame">
-            <video autoplay="autoplay" controls="controls" preload="preload">
-                <source src="{% static 'videos/video_presentation_pigier.mp4' %}" type="video/mp4"></source>
+            <video preload="preload">
+                <source src="../static/videos/video_presentation_pigier.mp4" type="video/mp4"></source>
             </video>
         </div>
 
@@ -141,7 +139,7 @@
                     <section class="container-box">
                         <div class="wrapper">
                             <div class="img-pres">
-                                <img src="{% static 'images/genie-logiciel.jpeg' %}" alt="Génie Logiciel" width="600"
+                                <img src="../static/images/genie-logiciel.jpeg" alt="Génie Logiciel" width="600"
                                     height="350" />
                             </div>
                             <div class="box-desc">
@@ -156,7 +154,7 @@
                     </section>
                     <section class="container-box">
                         <div class="img-pres">
-                            <img src="{% static 'images/comptabilite.jpeg' %}" alt="Comptabilité" width="600"
+                            <img src="../static/images/comptabilite.jpeg" alt="Comptabilité" width="600"
                                 height="350" />
                         </div>
                         <div class="box-desc">
@@ -172,7 +170,7 @@
                 <div class="sub-container">
                     <section class="container-box">
                         <div class="img-pres">
-                            <img src="{% static 'images/com-market.jpeg' %}" alt="Communication & Marketing" width="600"
+                            <img src="../static/images/com-market.jpeg" alt="Communication & Marketing" width="600"
                                 height="350" />
                         </div>
                         <div class="box-desc">
@@ -186,7 +184,7 @@
                     </section>
                     <section class="container-box">
                         <div class="img-pres">
-                            <img src="{% static 'images/entreprise-admin.jpeg' %}"
+                            <img src="../static/images/entreprise-admin.jpeg"
                                 alt="Management & Administration des Entreprises" width="600" height="350" />
                         </div>
                         <div class="box-desc">
@@ -261,9 +259,9 @@
         </div>
     </footer>
     <a href="#1" class="go-top">
-        <img src="{% static 'images/up-arrow-2.png' %}" alt="" srcset="" />
+        <img src="../static/images/up-arrow-2.png'" alt="" srcset="" />
     </a>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="{% static 'js/script.js' %}"></script>
+<script src="../static/js/script.js"></script>
 </html>

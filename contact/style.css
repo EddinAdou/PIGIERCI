@@ -1,128 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&family=Poppins:wght@100;200;300&display=swap');
+/* Styles pour les écrans larges */
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+  }
 
-:root {
-  --yellow: rgb(255, 248, 163);
-  --blue: rgb(12, 87, 153);
-  --yellow_s: rgb(254, 155, 46);
-  --safran: #ffd700;
-  --white: #fff;
-  --font: Arial;
+  .column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .column:first-child img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
+/* Styles par défaut pour les boutons (écrans larges) */
+#mainButton {
+  text-align: center;
+  padding: 15px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.button1,
+.button2,
+.button3 {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 5px;
+}
+
+
+/* Styles pour les écrans plus étroits (par exemple, les tablettes) */
+@media (max-width: 768px) {
+  #mainButton {
+    text-align: center;
+  }
+
+  .button1,
+  .button2,
+  .button3 {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+}
+
+
+/* Styles pour les tablettes */
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .column:first-child img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.boutton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+.button1 {
+  background-color: white;
+  color: #0d8ce6;
+  border: 2px solid #0d8ce6;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.button1:hover {
+  background-color: #0d8ce6;
+  color: white;
+
+}
+
+.button2 {
+  background-color: white;
+  color: #f0980a;
+  border: 2px solid #f0980a;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.button2:hover {
+  background-color: #f0980a;
+  color: white;
+}
+
+.button3 {
+  background-color: white;
+  color: #099333;
+  border: 2px solid #099333;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.button3:hover {
+  background-color: #099333;
+  color: white;
+}
+
+.div2,
+.div1 {
+  display: inline-block;
+  width: 50%;
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font);
+.div1 {
+  float: left;
 }
 
-a,
-a:hover {
-  text-decoration: none;
+.div2 {
+  float: right;
 }
 
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 25px;
-  background: #ffcf39;
-}
-
-.top-bar span {
-  color: #fff;
-}
-
-.top-bar ul {
+#mainButton {
+  text-align: center;
+  padding: 15px;
   list-style: none;
+}
+
+.container {
   display: flex;
+  padding: 10px;
 }
 
-.top-bar li {
-  margin: 0px 5px;
-}
-
-.top-bar a {
-  color: #fff;
-}
-
-.top-bar a:hover {
-  color: #222;
-}
-
-nav {
-  background: #fff;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-}
-
-nav a {
-  color: blue;
-}
-
-nav a:hover {
-  color: #ffcf39;
-}
-
-.logo {
+.column {
   flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc
 }
 
-.logo a {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+.column:first-child img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
-.logo a:hover {
-  color: #fff;
+.cont {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  max-width: 100%;
+  text-align: center;
 }
 
-.logo img {
-  width: 100px;
-  margin-right: 20px;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
+ul {
   list-style: none;
+  padding: 0;
 }
 
-.menu li {
-  padding: 15px 10px;
-  font-size: 14px;
+li {
+  margin-bottom: 10px;
 }
 
-.toggle {
-  font-size: 40px;
-  display: none;
+a {
+  text-decoration: none;
+  align-items: center;
 }
 
-@media screen and (max-width: 600px) {
-  nav {
-    display: block;
-    position: relative;
-    padding: 15px 20px;
-  }
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
 
-  .menu {
-    margin-top: 15px;
-    display: none;
-  }
+body>h1:first-child {
+  border: 1px solid black;
+  background-color: #fdc602;
+  color: #020d36
+}
 
-  .menu.active,
-  .toggle {
-    display: block;
-  }
-
-  .toggle {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
+p {
+  line-height: 3em;
+  font-size: 25px;
+  text-decoration: underline;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #fdc602
 }

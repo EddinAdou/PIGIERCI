@@ -487,9 +487,20 @@ section.container-box {
     right: 1%;
 }
 
+video {
+    width: 70%;
+    height: 400px;
+}
+
 .responsive-video {
     max-width: 100%;
     height: auto;
+}
+
+.frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 1068px) {

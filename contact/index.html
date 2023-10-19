@@ -5,42 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="top-bar">
-            <span><ion-icon name="call-outline"></ion-icon>27 20 30 35 00</span>
-            <ul>
-                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-            </ul>
-        </div>
-
-        <nav>
-
+    <div class="header" id="header">
+        <div style="
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin: 15px;
+      ">
             <div class="logo">
-                <a href="#"><img src="./images/pigierci logo.jpg" alt="logo"></a>
+                <a href="">
+                    <img src="../static/images/1.png" alt="Pigier Côte d'Ivoire Logo" />
+                </a>
             </div>
-            <div class="toggle">
-                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+            <div class="title">Pigier<br />Côte d'Ivoire</div>
+        </div>
+        <span class="burger-img">
+            <img src="../static/images/menu.png" alt="burger" />
+        </span>
+        <div class="menu hidden">
+            <span class="cross-img">
+                <img src="../static/images/x-mark.png" alt="cross" />
+            </span>
+            <div class="menu-container">
+                <div class="menu-items">
+                    <a href="../accueil/index.html" class="menu-items-link onhover">Accueil</a>
+                </div>
+                <div class="menu-items">
+                    <a class="menu-items-link" style="cursor: pointer">Présentation</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"> Historique </a>
+                        </li>
+                        <li>
+                            <a href="#"> Gouvernance </a>
+                        </li>
+                        <li>
+                            <a href="#"> Nos partenaires </a>
+                        </li>
+                        <li>
+                            <a href="#"> Guide d'accueil </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a class="menu-items-link" style="cursor: pointer">Formations</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"> Lettre aux futurs étudiants </a>
+                        </li>
+                        <li>
+                            <a href="#"> Licence Professionnelle </a>
+                        </li>
+                        <li>
+                            <a href="#"> Master Professionel </a>
+                        </li>
+                        <li>
+                            <a href="#"> Formation ouverte à distance (FOAD) </a>
+                        </li>
+                        <li>
+                            <a href="#"> Formation continue </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a class="menu-items-link" style="cursor: pointer">Espace Etudiant</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"> Microsoft 365 </a>
+                        </li>
+                        <li>
+                            <a href="#"> Demande en ligne </a>
+                        </li>
+                        <li>
+                            <a href="#"> Alumni </a>
+                        </li>
+                        <li>
+                            <a href="#"> S'inscrire </a>
+                        </li>
+                        <li>
+                            <a href="#"> Réglements </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a href="" class="menu-items-link onhover">Contact</a>
+                </div>
             </div>
-            <ul class="menu">
-                <li class="menu"><a href="#">Accueil</a></li>
-                <li class="menu"><a href="#">Présentation</a></li>
-                <li class="menu"><a href="#">Formations</a></li>
-                <li class="menu"><a href="#">Espace Etudiant</a></li>
-                <li class="menu"><a href="#">Contact</a></li>
+        </div>
+    </div>
 
-            </ul>
-        </nav>
-    </header>
+    <div class="main">
+        <h1>Nos contacts</h1>
+        <!-- ici on affiche les contacts -->
+        <div id="mainButton">
+            <a href="abidjan.html" class="button1">Plateau</a>
+            <a href="yopougon.html" class="button2">Yopougon</a>
+            <a href="yakro.html" class="button3">Yamoussoukro</a>
+        </div>
+        <div class="container">
+            <div class="column">
+                <img src="../static/images/pigier-2.jpeg" width="300" />
+            </div>
+            <div class="column cont">
+                <ul>
+                    <li><a href="#"><img src="../static/images/logo-whatsapp.svg" alt="logo whatsapp" width="35"></a>Whatsapp : 07 05
+                        08 25 30</li>
+                    <li><a href="#"><img src="../static/images/call-outline.svg" alt="logo appel" width="35"></a> Téléphone: (225) 27
+                        20 30 35 00</li>
+                    <li><a href="#"><img src="../static/images/mail-outline.svg" alt="logo mail" width="35"></a>Mail:
+                        pigier@pigierci.com</li>
+                    <li><a href="#"><img src="../static/images/location-outline.svg" alt="logo adresse" width="35"></a> Adresse: Face
+                        Hôtel Présidentt, Yamoussoukro</li>
+                    <li><a href="#"><img src="../static/images/file-tray-stacked-outline.svg" alt="logo de boîte postale"
+                                width="35"></a> Boîte postale: 01 BP 1585 ABIDJAN 01</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
+    <script src="../static/js/script.js">
         $(function () {
             $(".toggle").on("click", function () {
                 if ($(".menu").hasClass("active")) {
