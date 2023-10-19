@@ -13,6 +13,7 @@
     <link rel="icon" href="" type="image/x-icon" />
     <title>Website</title>
 </head>
+
 <body>
     <div class="top-container" id="1">
         <div class="header" id="header">
@@ -120,9 +121,17 @@
 
     <div class="main">
         <div class="frame">
-            <video preload="preload">
-                <source src="../static/videos/video_presentation_pigier.mp4" type="video/mp4"></source>
+            <div id="video-controls"></div>
+            <video preload="metadata" id="present-video">
+                <source src="../static/videos/video_presentation_pigier.mp4" type="video/mp4">
+                </source>
             </video>
+            <button id="play" style="display: flex; justify-content: center; align-items: center;">
+                <img src="../static/images/play.png" alt="" srcset="">
+            </button>
+            <button id="pause" style="display: none; justify-content: center; align-items: center;">
+                <img src="../static/images/pause.png" alt="" srcset="">
+            </button>
         </div>
 
         <div class="formation">
@@ -154,8 +163,7 @@
                     </section>
                     <section class="container-box">
                         <div class="img-pres">
-                            <img src="../static/images/comptabilite.jpeg" alt="Comptabilité" width="600"
-                                height="350" />
+                            <img src="../static/images/comptabilite.jpeg" alt="Comptabilité" width="600" height="350" />
                         </div>
                         <div class="box-desc">
                             <span> Comptabilité </span>
@@ -264,4 +272,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../static/js/script.js"></script>
+
 </html>

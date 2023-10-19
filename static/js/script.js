@@ -61,8 +61,10 @@ function decrementIndex() {
   updateTransform(currentIndex);
 }
 
-btnLeft.addEventListener("click", decrementIndex);
-btnRight.addEventListener("click", incrementIndex);
+if (btnLeft && btnRight) {
+  btnLeft.addEventListener("click", decrementIndex);
+  btnRight.addEventListener("click", incrementIndex);
+}
 
 // actived links
 const links = document.querySelectorAll(".menu-items-link");
@@ -72,3 +74,69 @@ links.forEach((link) => {
     link.classList.toggle("active");
   });
 });
+
+$(function () {
+  $(".toggle").on("click", function () {
+    if ($(".menu").hasClass("active")) {
+      $(".menu").removeClass("active");
+      $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+    } else {
+      $(".menu").addClass("active");
+      $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+    }
+  });
+});
+
+const boxes = document.getElementsByClassName("--box");
+
+document.querySelectorAll(".data-link-buttons a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetClass = link.getAttribute("class").split(' ')[1];
+
+    Array.from(boxes).forEach((box) => {
+      if (box.id === targetClass) {
+        box.style.display = "block"; // OK
+      } else {
+        box.style.display = "none"; // !OK
+      }
+    });
+  });
+});
+
+// Video custom player
+const video = document.getElementById('present-video');
+const videoControls = document.getElementById('video-controls');
+
+const videoWorks = !!document.createElement('video').canPlayType;
+if (videoWorks) {
+  video.controls = false;
+  videoControls.classList.remove('hidden');
+}
+
+const playButton = document.getElementById('play');
+const pauseButton = document.getElementById('pause');
+
+togglePlay = () => {
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
+  updatePlayButton();
+}
+
+playButton.addEventListener('click', togglePlay);
+pauseButton.addEventListener('click', togglePlay);
+
+function updatePlayButton() {
+  if (video.paused) {
+    playButton.style.display = "none";
+    pauseButton.style.display = "flex";
+  } else {
+    playButton.style.display = "flex";
+    pauseButton.style.display = "none";
+  }
+}
+
+updatePlayButton();
