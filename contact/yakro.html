@@ -105,32 +105,26 @@
     <div class="main">
         <h1>NOS CONTACTS</h1>
         <!-- ici on affiche les contacts -->
-        <section id="mainButton">
-
-            <button><a href="abidjan.html">Plateau</a></button>
-            <button><a href="yopougon.html">Yopougon</a></button>
-            <button><a href="yakro.html">Yamoussoukro</a></button>
-
-        </section>
-        <figure>
-            <!-- Ici on affiche l'image de la ville-->
-            <img src="../static/images/yamoussoukro.jpg" width="300" />
-            <figcaption>Pigier Yamoussoukro</figcaption>
-        </figure>
-        <aside>
-            <ul>
-                <li><img src="../static/images/logo-whatsapp.svg" alt="logo whatsapp" width="35"> <label for="whatsapp"> whatsapp: 07 05
-                        08 25 30</label></li>
-                <li><img src="../static/images/call-outline.svg" alt="logo appel" width="35"> <label for="telephone"> Téléphone: (225)
-                        27 20 30 35 00</label></li>
-                <li><img src="../static/images/mail-outline.svg" alt="logo mail" width="35"> <label for="mail"> Mail:
-                        pigier@pigierci.com</label></li>
-                <li><img src="../static/images/location-outline.svg" alt="logo adresse" width="35"> <label for="adresse"> Adresse: Face
-                        Hôtel Présidentt, Yamoussoukro</label></li>
-                <li><img src="../static/images/file-tray-stacked-outline.svg" alt="logo de boîte postale" width="35"> <label
-                        for="boitePostale"> Boîte postale: 01 BP 1585 ABIDJAN 01</label></li>
-            </ul>
-        </aside>
+        <div id="mainButton">
+            <a href="abidjan.html" class="button1">Plateau</a>
+            <a href="yopougon.html" class="button2">Yopougon</a>
+            <a href="yakro.html" class="button3">Yamoussoukro</a>
+            <p>Pigier Yamoussoukro</p> 
+        </div>
+        <div class="container">
+            <div class="column">
+                <img src="../static/images/yamoussoukro.jpg" width="300"/>
+            </div>
+            <div class="column cont">
+                <ul>
+                    <li><a href="https://api.whatsapp.com/message/HEGY3G6SWCP7D1?autoload=1&app_absent=0"><img src="../static/images/logo-whatsapp.svg" alt="logo whatsapp" width="35" ></a>Whatsapp : 07 05 08 25 30</li>
+                    <li><a href="tel:2720303500"><img src="../static/images/call-outline.svg" alt="logo appel" width="35" ></a> Téléphone: (225) 27 20 30 35 00 </li>
+                    <li><a href="mailto:pigier@pigierci.com"><img src="../static/images/mail-outline.svg" alt="logo mail" width="35" ></a>Mail: pigier@pigierci.com</li>
+                    <li><a href="https://www.google.com/maps/place/Pigier+Yamoussoukro/@6.8054787,-5.2531307,15z/data=!4m14!1m7!3m6!1s0xfb897335d86d33b:0xd7f3ae55d5abe579!2sPigier+Yamoussoukro!8m2!3d6.8054787!4d-5.2531307!16s%2Fg%2F11gfn78794!3m5!1s0xfb897335d86d33b:0xd7f3ae55d5abe579!8m2!3d6.8054787!4d-5.2531307!16s%2Fg%2F11gfn78794?entry=ttu"><img src="../static/images/location-outline.svg" alt="logo adresse" width="35" ></a> Adresse: Face Hôtel Présidentt, Yamoussoukro</li>
+                    <li><a href="#"><img src="../static/images/file-tray-stacked-outline.svg" alt="logo de boîte postale" width="35" ></a>  Boîte postale: 01 BP 1585 ABIDJAN 01</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 
