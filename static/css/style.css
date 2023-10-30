@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
+html {
+    scroll-behavior: smooth; /* scroll back to top button transition*/
+}
+
 :root {
     --yellow: rgb(255, 248, 163);
     --blue: rgb(12, 87, 153);
@@ -51,15 +55,15 @@ body {
 }
 
 .hidden,
-.show,
-.menu {
+.show {
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
+    overflow: auto;
 }
 
 .hidden {
     width: 0;
-    right: -1000px;
+    right: -1000%;
 }
 
 .show {
@@ -112,20 +116,18 @@ body {
     color: var(--blue);
 }
 
-.active .arrow {
-    transform: rotate(180deg);
-}
-
 .menu {
     position: fixed;
     min-height: 100vh;
     top: 0;
+    bottom: 0;
     padding: 45px;
     z-index: 100;
     background: linear-gradient(var(--hor-nav-color), var(--hor-nav-color)),
         url("../images/nvbar-bg.jpg") no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -155,26 +157,6 @@ body {
     position: relative;
 }
 
-.header .menu .onhover::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    background-color: var(--blue);
-    bottom: -3px;
-    border-radius: 5px;
-    left: 0;
-    transition: width 0.4s;
-}
-
-.header a:hover {
-    color: var(--blue);
-}
-
-.header .menu .onhover:hover:after {
-    width: 100%;
-}
-
 .header .logo {
     display: flex;
     justify-content: center;
@@ -183,7 +165,7 @@ body {
     transition: 0.5s;
 }
 
-.header .logo:hover~.title {
+.header .logo:hover ~ .title {
     color: var(--blue);
     border-color: #000;
     transform: translateX(0);
@@ -209,32 +191,64 @@ body {
 }
 
 .menu-container {
-    display: flex;
     position: relative;
     width: 100%;
     padding-top: 50px;
-    flex-direction: column;
+}
+
+.menu-items-link {
+    padding: 10px 4rem 10px 5px;
+}
+
+.menu-items-link:hover {
+    background-color: var(--blue);
+    color: #fff;
 }
 
 .menu-items {
-    margin-bottom: 4%;
     font-size: 16px;
-    transition: 1s ease;
+    margin: 10% 0;
 }
 
-.rolled {
+.sub-menu {
+    padding-top: 15px;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    display: none;
+    transition: display 0.2s linear;
+    margin: 0 0 0 25px;
+}
+
+.sub-menu li {
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+.sub-menu li:hover {
+    background-color: var(--blue);
+}
+
+.sub-menu li:hover a {
+    color: white;
+}
+
+.menu-items:hover .sub-menu {
     display: block;
 }
 
-.menu-items .sub-menu {
-    display: none;
-    margin: 0 0 0 25px;
-    overflow: hidden;
-    transition: 1s ease;
+i.arrow {
+    margin-left: 15px;
+    transition: all .3s ease;
 }
 
-.menu-items .sub-menu li {
-    line-height: 20px;
+.menu-items:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.menu-items:hover .menu-items-link {
+    background-color: var(--blue);
+    color: #ffffff;
 }
 
 .top-container {
@@ -407,7 +421,7 @@ section.container-box {
     margin-right: 10px;
     min-width: calc(40% - 10px);
     width: calc(40% - 10px);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border: 1px solid #cfcfcf;
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
@@ -495,7 +509,7 @@ video {
 }
 
 .frame {
-    padding-top: 25px;
+    padding: 35px 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -577,7 +591,7 @@ video {
 
 .schools-data-box .present-img img {
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 
 .schools-data-box .box-links ul img {
@@ -592,19 +606,14 @@ video {
 
 .frame button {
     border: none;
-    background-color: #b4b1b1b5;
     position: absolute;
-    height: 22%;
-    width: 10%;
-    top: 65%;
-    right: 18%;
+    height: 13.443%;
+    width: 6.5%;
+    top: 80%;
+    right: 17%;
     border-radius: 50%;
-    transition: display .5s ease-in-out;
-}
-
-.frame button img {
-    width: 65%;
-    height: 65%;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 @media (max-width: 1068px) {
@@ -696,8 +705,6 @@ video {
         width: 40px;
         top: 64%;
         right: 17%;
-        border-radius: 50%;
-        transition: display .5s ease-in-out;
     }
 
     .frame button img {

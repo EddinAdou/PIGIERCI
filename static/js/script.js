@@ -1,15 +1,18 @@
 const header = document.getElementById("header");
+const headerContent = document.getElementsByClassName("text-present")[0];
 const btnTop = document.querySelector(".go-top");
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu-items-link");
 
 window.addEventListener("scroll", (e) => {
-  if (window.scrollY > 250) {
+  if (window.scrollY > 350) {
     header.classList.add("fixed");
     header.style.backgroundColor = "#fff";
+    headerContent.style.padding = "14% 15%";
   } else if (window.scrollY == 0) {
     header.classList.remove("fixed");
     header.style.backgroundColor = "transparent";
+    headerContent.style.padding = "13% 15%";
   }
   if (window.scrollY >= 500) {
     btnTop.style.display = "flex";
@@ -26,14 +29,6 @@ document.querySelector(".burger-img").addEventListener("click", (e) => {
 document.querySelector(".cross-img").addEventListener("click", (e) => {
   menu.classList.remove("show");
   menu.classList.add("hidden");
-});
-
-menuLinks.forEach((menuLink) => {
-  menuLink.addEventListener("click", (e) => {
-    if (menuLink.classList.contains("unrolled"))
-      menuLink.classList.add("unrolled");
-    else menuLink.classList.remove("unrolled");
-  });
 });
 
 // Navigation's buttons
@@ -67,25 +62,8 @@ if (btnLeft && btnRight) {
 }
 
 // actived links
-const links = document.querySelectorAll(".menu-items-link");
+let links = document.querySelectorAll(".menu-items-link");
 
-links.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    link.classList.toggle("active");
-  });
-});
-
-$(function () {
-  $(".toggle").on("click", function () {
-    if ($(".menu").hasClass("active")) {
-      $(".menu").removeClass("active");
-      $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-    } else {
-      $(".menu").addClass("active");
-      $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-    }
-  });
-});
 
 const boxes = document.getElementsByClassName("--box");
 
@@ -130,7 +108,7 @@ playButton.addEventListener('click', togglePlay);
 pauseButton.addEventListener('click', togglePlay);
 
 function updatePlayButton() {
-  if (video.paused) {
+  if (video.paused || video.ended) {
     playButton.style.display = "none";
     pauseButton.style.display = "flex";
   } else {
