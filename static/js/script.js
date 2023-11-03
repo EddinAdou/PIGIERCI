@@ -8,16 +8,26 @@ window.addEventListener("scroll", (e) => {
   if (window.scrollY > 350) {
     header.classList.add("fixed");
     header.style.backgroundColor = "#fff";
-    headerContent.style.padding = "14% 15%";
+    if (headerContent) headerContent.style.padding = "14% 15%";
   } else if (window.scrollY == 0) {
     header.classList.remove("fixed");
     header.style.backgroundColor = "transparent";
-    headerContent.style.padding = "13% 15%";
+    if (headerContent) headerContent.style.padding = "13% 15%";
   }
   if (window.scrollY >= 500) {
     btnTop.style.display = "flex";
   } else {
     btnTop.style.display = "none";
+  }
+});
+
+// Click outside the menu box
+$(document).mouseup((e) => {
+  const container = $(".menu")
+
+  if (!$(container).is(e.target) && $(container).has(e.target).length === 0 && menu.classList.contains("show")) {
+    menu.classList.remove("show");
+    menu.classList.add("hidden");
   }
 });
 
@@ -61,10 +71,19 @@ if (btnLeft && btnRight) {
   btnRight.addEventListener("click", incrementIndex);
 }
 
-// actived links
-let links = document.querySelectorAll(".menu-items-link");
+// Actived links
+const navLinks = [...document.getElementsByClassName('click-link')];
+window.addEventListener('load', () => {
+  let pathname = window.location.pathname;
+  for (let link of navLinks) {
+    let linkHref = new URL(link).pathname
+    if (linkHref === pathname) {
+      link.className += " active";
+    }
+  }
+})
 
-
+// Box infos
 const boxes = document.getElementsByClassName("--box");
 
 document.querySelectorAll(".data-link-buttons a").forEach((link) => {
@@ -86,35 +105,37 @@ document.querySelectorAll(".data-link-buttons a").forEach((link) => {
 const video = document.getElementById('present-video');
 const videoControls = document.getElementById('video-controls');
 
-const videoWorks = !!document.createElement('video').canPlayType;
-if (videoWorks) {
-  video.controls = false;
-  videoControls.classList.remove('hidden');
-}
-
-const playButton = document.getElementById('play');
-const pauseButton = document.getElementById('pause');
-
-togglePlay = () => {
-  if (video.paused || video.ended) {
-    video.play();
-  } else {
-    video.pause();
+if (video) {
+  const videoWorks = !!document.createElement('video').canPlayType;
+  if (videoWorks) {
+    video.controls = false;
+    videoControls.classList.remove('hidden');
   }
+
+  const playButton = document.getElementById('play');
+  const pauseButton = document.getElementById('pause');
+
+  togglePlay = () => {
+    if (video.paused || video.ended) {
+      video.play();
+    } else {
+      video.pause();
+    }
+    updatePlayButton();
+  }
+
+  playButton.addEventListener('click', togglePlay);
+  pauseButton.addEventListener('click', togglePlay);
+
+  function updatePlayButton() {
+    if (video.paused || video.ended) {
+      playButton.style.display = "none";
+      pauseButton.style.display = "flex";
+    } else {
+      playButton.style.display = "flex";
+      pauseButton.style.display = "none";
+    }
+  }
+
   updatePlayButton();
 }
-
-playButton.addEventListener('click', togglePlay);
-pauseButton.addEventListener('click', togglePlay);
-
-function updatePlayButton() {
-  if (video.paused || video.ended) {
-    playButton.style.display = "none";
-    pauseButton.style.display = "flex";
-  } else {
-    playButton.style.display = "flex";
-    pauseButton.style.display = "none";
-  }
-}
-
-updatePlayButton();

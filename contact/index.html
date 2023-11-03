@@ -44,37 +44,38 @@
                     <i class="arrow fa-solid fa-arrow-up"></i>
                     <ul class="sub-menu">
                         <li>
-                            <a href="#" class="click-link"> Historique </a>
+                            <a href="../accueil/index.html/history.html" class="click-link"> Historique </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Gouvernance </a>
+                            <a href="../accueil/index.html/gouv.html" class="click-link"> Gouvernance </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Nos partenaires </a>
+                            <a href="../accueil/index.html/patners.html" class="click-link"> Nos partenaires </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Guide d'accueil </a>
+                            <a href="../accueil/index.html/guide.html" class="click-link"> Guide d'accueil </a>
                         </li>
                     </ul>
                 </div>
                 <div class="menu-items">
-                    <a class="menu-items-link" style="cursor: default;">Formations</a>
+                    <a href="../accueil/formations" class="menu-items-link">Formations</a>
                     <i class="arrow fa-solid fa-arrow-up"></i>
                     <ul class="sub-menu">
                         <li>
-                            <a href="#" class="click-link"> Lettre aux futurs étudiants </a>
+                            <a href="../accueil/letter/new.html" class="click-link"> Lettre aux futurs étudiants </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Licence Professionnelle </a>
+                            <a href="../accueil/licence.html" class="click-link"> Licence Professionnelle </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Master Professionel </a>
+                            <a href="../accueil/master.html" class="click-link"> Master Professionel </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Formation ouverte à distance (FOAD) </a>
+                            <a href="../accueil/formation/foad.html" class="click-link"> Formation ouverte à distance
+                                (FOAD) </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Formation continue </a>
+                            <a href="../accueil/formation/continue.html" class="click-link"> Formation continue </a>
                         </li>
                     </ul>
                 </div>
@@ -83,24 +84,24 @@
                     <i class="arrow fa-solid fa-arrow-up"></i>
                     <ul class="sub-menu">
                         <li>
-                            <a href="#" class="click-link"> Microsoft 365 </a>
+                            <a href=".." class="click-link"> Microsoft 365 </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Demande en ligne </a>
+                            <a href="../accueil/demandenligne.html" class="click-link"> Demande en ligne </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Alumni </a>
+                            <a href="../accueil/alumni.html" class="click-link"> Alumni </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> S'inscrire </a>
+                            <a href="../accueil/inscription.html" class="click-link"> S'inscrire </a>
                         </li>
                         <li>
-                            <a href="#" class="click-link"> Réglements </a>
+                            <a href="../accueil/whattoknow.html" class="click-link"> Réglements </a>
                         </li>
                     </ul>
                 </div>
                 <div class="menu-items">
-                    <a href="" class="menu-items-link click-link">Contact</a>
+                    <a href="../contact/index.html" class="menu-items-link click-link">Contact</a>
                 </div>
             </div>
         </div>
@@ -116,9 +117,8 @@
                 <a href="" class="3 y">Yamoussoukro</a>
             </div>
             <div class="schools-data-box">
-                <div class="--box">
-                    <div class="present-img">
-                        <img src="../static/images/pigier-2.jpeg"/>
+                <!-- <div class="--box">
+                    <div class="present-img" name-img=c="../static/images/pigier-present.jpeg" />
                     </div>
                     <div class="box-links">
                         <ul>
@@ -145,11 +145,12 @@
                         secrétariat, le tourisme, et d'autres domaines liés aux métiers du tertiaire. Ces écoles sont
                         présentes dans plusieurs pays, y compris en France et dans d'autres pays francophones.
                     </div>
-                </div>
+                </div> -->
 
                 <div id="p" class="--box">
                     <div class="present-img">
-                        <img src="../static/images/pigier-2.jpeg"/>
+                        <span class="box-info">Plateau</span>
+                        <img src="../static/images/pigier-2.jpeg" class="school-img" />
                     </div>
                     <div class="box-links">
                         <ul>
@@ -190,7 +191,8 @@
 
                 <div id="yo" class="--box">
                     <div class="present-img">
-                        <img src="../static/images/YOPOUGON.jpg"/>
+                        <span class="box-info">Yopougon</span>
+                        <img src="../static/images/YOPOUGON.jpg" class="school-img" />
                     </div>
                     <div class="box-links">
                         <ul>
@@ -232,7 +234,8 @@
 
                 <div id="y" class="--box">
                     <div class="present-img">
-                        <img src="../static/images/yamoussoukro.jpg"/>
+                        <span class="box-info">Yamoussoukro</span>
+                        <img src="../static/images/yamoussoukro.jpg" class="school-img" />
                     </div>
                     <div class="box-links">
                         <ul>
@@ -317,6 +320,24 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="../static/js/script.js">
+</script>
+<script>
+    // Text over cursor when hovered image
+    let xp = 0, yp = 0;
+
+    $(document).mouseover((e) => {
+        $('.school-img').each(() => {
+            console.log($(this).parent.children())
+            if ($(this).is(e.target)) {
+                console.log($(this))
+            }
+        })
+        // console.log('hovered')
+    })
+
+    // image.addEventListener('mouseleave', (e) => {
+    //     console.log('not hovered')
+    // })
 </script>
 
 </html>
