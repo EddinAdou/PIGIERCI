@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div style="
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        margin: 15px;
+      ">
+            <div class="logo">
+                <a href="">
+                    <img src="../static/images/1.png" alt="Pigier Côte d'Ivoire Logo" />
+                </a>
+            </div>
+            <div class="title">Pigier<br />Côte d'Ivoire</div>
+        </div>
+        <span class="burger-img">
+            <img src="../static/images/menu.png" alt="burger" />
+        </span>
+        <div class="menu hidden">
+            <span class="cross-img">
+                <img src="../static/images/x-mark.png" alt="cross" />
+            </span>
+            <div class="menu-container">
+                <div class="menu-items">
+                    <a href="../accueil/index.html" class="menu-items-link click-link">Accueil</a>
+                </div>
+                <div class="menu-items">
+                    <a class="menu-items-link" style="cursor: default;">Présentation</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../accueil/index.html/history.html" class="click-link"> Historique </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/index.html/gouv.html" class="click-link"> Gouvernance </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/index.html/patners.html" class="click-link"> Nos partenaires </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/index.html/guide.html" class="click-link"> Guide d'accueil </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a href="../accueil/formations" class="menu-items-link">Formations</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../accueil/letter/new.html" class="click-link"> Lettre aux futurs étudiants </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/licence.html" class="click-link"> Licence Professionnelle </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/master.html" class="click-link"> Master Professionel </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/formation/foad.html" class="click-link"> Formation ouverte à distance
+                                (FOAD) </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/formation/continue.html" class="click-link"> Formation continue </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a class="menu-items-link" style="cursor: default;">Espace Etudiant</a>
+                    <i class="arrow fa-solid fa-arrow-up"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href=".." class="click-link"> Microsoft 365 </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/demandenligne.html" class="click-link"> Demande en ligne </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/alumni.html" class="click-link"> Alumni </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/inscription.html" class="click-link"> S'inscrire </a>
+                        </li>
+                        <li>
+                            <a href="../accueil/whattoknow.html" class="click-link"> Réglements </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-items">
+                    <a href="../contact/index.html" class="menu-items-link click-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="schools-data">
+            <h1>Nos contacts</h1>
+            <!-- ici on affiche les contacts -->
+            <div class="data-link-buttons">
+                <a href="" class="1 p">Plateau</a>
+                <a href="" class="2 yo">Yopougon</a>
+                <a href="" class="3 y">Yamoussoukro</a>
+            </div>
+            <div class="schools-data-box">
+                <!-- <div class="--box">
+                    <div class="present-img" name-img=c="../static/images/pigier-present.jpeg" />
+                    </div>
+                    <div class="box-links">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/mail-outline.svg" alt="logo mail" width="25">
+                                    Mail:
+                                    pigier@pigierci.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/file-tray-stacked-outline.svg"
+                                        alt="logo de boîte postale" width="25">
+                                    Boîte postale: 01 BP 1585 ABIDJAN 01
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="school-desc">
+                        Pigier est un réseau d'écoles privées qui propose des formations professionnelles dans divers
+                        domaines tels que le commerce, la gestion, le marketing, les ressources humaines,
+                        l'informatique, le
+                        secrétariat, le tourisme, et d'autres domaines liés aux métiers du tertiaire. Ces écoles sont
+                        présentes dans plusieurs pays, y compris en France et dans d'autres pays francophones.
+                    </div>
+                </div> -->
+
+                <div id="p" class="--box">
+                    <div class="present-img">
+                        <span class="box-info">Plateau</span>
+                        <img src="../static/images/pigier-2.jpeg" class="school-img" />
+                    </div>
+                    <div class="box-links">
+                        <ul>
+                            <li><a href="https://api.whatsapp.com/message/HEGY3G6SWCP7D1?autoload=1&app_absent=0">
+                                    <img id="imw" src="../static/images/logo-whatsapp.svg" alt="logo whatsapp"
+                                        width="25">
+                                    Whatsapp : 07 05 08 25 30
+                                </a>
+                            </li>
+                            <li><a href="tel:2720303500">
+                                    <img src="../static/images/call-outline.svg" alt="logo appel" width="25">
+                                    Téléphone: (225) 27 20 30 35 00
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:pigier@pigierci.com">
+                                    <img src="../static/images/mail-outline.svg" alt="logo mail" width="25">
+                                    Mail: pigier@pigierci.com
+                                </a>
+                            </li>
+                            <li><a
+                                    href="https://www.google.com/maps/place/PIGIER+C%C3%B4te+d'Ivoire,+l'Universit%C3%A9+des+M%C3%A9tiers/@5.325971,-4.0195849,18z/data=!4m14!1m7!3m6!1s0xfc1ebb0fa852111:0x28571f0062e7558e!2sPIGIER+C%C3%B4te+d'Ivoire,+l'Universit%C3%A9+des+M%C3%A9tiers!8m2!3d5.3253778!4d-4.0201978!16s%2Fg%2F121m7wj3!3m5!1s0xfc1ebb0fa852111:0x28571f0062e7558e!8m2!3d5.3253778!4d-4.0201978!16s%2Fg%2F121m7wj3?entry=ttu">
+                                    <img src="../static/images/location-outline.svg" alt="logo adresse" width="25">
+                                    Adresse: Intersection
+                                    du Boulevard Clozel et de l'Avenue Marchand, Abidjan, Côte d’Ivoire
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/file-tray-stacked-outline.svg"
+                                        alt="logo de boîte postale" width="25">
+                                    Boîte postale: 01 BP 1585 ABIDJAN 01
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="yo" class="--box">
+                    <div class="present-img">
+                        <span class="box-info">Yopougon</span>
+                        <img src="../static/images/YOPOUGON.jpg" class="school-img" />
+                    </div>
+                    <div class="box-links">
+                        <ul>
+                            <li>
+                                <a href="https://api.whatsapp.com/message/HEGY3G6SWCP7D1?autoload=1&app_absent=0">
+                                    <img src="../static/images/logo-whatsapp.svg" alt="logo whatsapp" width="25">
+                                    Whatsapp : 07 05
+                                    08 25 30
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:2720303500">
+                                    <img src="../static/images/call-outline.svg" alt="logo appel" width="25">
+                                    Téléphone: (225) 27 20 30 35 00
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:pigier@pigierci.com">
+                                    <img src="../static/images/mail-outline.svg" alt="logo adresse" width="25">
+                                    Mail: pigier@pigierci.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/mbxX8wCrpZBdXVyR7">
+                                    <img src="../static/images/location-outline.svg" alt="logo mail" width="25">
+                                    Adresse: 01, Abidjan, Côte d’Ivoire
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/file-tray-stacked-outline.svg"
+                                        alt="logo de boîte postale" width="25">
+                                    Boîte postale: 01 BP 1585 ABIDJAN 01
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="y" class="--box">
+                    <div class="present-img">
+                        <span class="box-info">Yamoussoukro</span>
+                        <img src="../static/images/yamoussoukro.jpg" class="school-img" />
+                    </div>
+                    <div class="box-links">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/logo-whatsapp.svg" alt="logo whatsapp" width="25">
+                                    Whatsapp : 07 05 08 25 30
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/call-outline.svg" alt="logo appel" width="25">
+                                    Téléphone: (225) 27 20 30 35 00
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/mail-outline.svg" alt="logo mail" width="25">
+                                    Mail: pigier@pigierci.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/location-outline.svg" alt="logo adresse" width="25">
+                                    Adresse: Face Hôtel Présidentt, Yamoussoukro
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../static/images/file-tray-stacked-outline.svg"
+                                        alt="logo de boîte postale" width="25">
+                                    Boîte postale: 01 BP 1585 ABIDJAN 01
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Scholarvox</a></li>
+                        <li><a href="#">Accéder au portail FOAD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Entrer en Contact</h4>
+                    <ul>
+                        <li><a href="#">Contacter Pigier</a></li>
+                        <li><a href="#">Cartes et itinéraires</a></li>
+                        <li><a href="#">S'inscrire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-info">
+                    <p>&copy; 2023 Pigier Côte d'Ivoire. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#1" class="go-top">
+        <img src="../static/images/up-arrow-2.png" alt="" srcset="" />
+    </a>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="../static/js/script.js">
+</script>
+<script>
+    // Text over cursor when hovered image
+    let xp = 0, yp = 0;
+
+    $(document).mouseover((e) => {
+        $('.school-img').each(() => {
+            console.log($(this).parent.children())
+            if ($(this).is(e.target)) {
+                console.log($(this))
+            }
+        })
+        // console.log('hovered')
+    })
+
+    // image.addEventListener('mouseleave', (e) => {
+    //     console.log('not hovered')
+    // })
+</script>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="" type="image/x-icon" />
+    <title>Website</title>
+</head>
+
+<body>
+    <div class="top-container" id="1">
+        <div class="header" id="header">
+            <div style="
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin: 15px;
+          ">
+                <div class="logo">
+                    <a href="">
+                        <img src="../static/images/1.png" alt="Pigier Côte d'Ivoire Logo" />
+                    </a>
+                </div>
+                <div class="title">Pigier<br />Côte d'Ivoire</div>
+            </div>
+            <span class="burger-img">
+                <img src="../static/images/menu.png" alt="burger" />
+            </span>
+            <div class="menu hidden">
+                <span class="cross-img">
+                    <img src="../static/images/x-mark.png" alt="cross" />
+                </span>
+                <div class="menu-container">
+                    <div class="menu-items">
+                        <a href="../accueil/index.html" class="menu-items-link click-link">Accueil</a>
+                    </div>
+                    <div class="menu-items">
+                        <a class="menu-items-link" style="cursor: default;">Présentation</a>
+                        <i class="arrow fa-solid fa-arrow-up"></i>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../accueil/index.html/history.html" class="click-link"> Historique </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/index.html/gouv.html" class="click-link"> Gouvernance </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/index.html/patners.html" class="click-link"> Nos partenaires </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/index.html/guide.html" class="click-link"> Guide d'accueil </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-items">
+                        <a href="../accueil/formations" class="menu-items-link">Formations</a>
+                        <i class="arrow fa-solid fa-arrow-up"></i>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="../accueil/letter/new.html" class="click-link"> Lettre aux futurs étudiants </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/licence.html" class="click-link"> Licence Professionnelle </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/master.html" class="click-link"> Master Professionel </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/formation/foad.html" class="click-link"> Formation ouverte à distance (FOAD) </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/formation/continue.html" class="click-link"> Formation continue </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-items">
+                        <a class="menu-items-link" style="cursor: default;">Espace Etudiant</a>
+                        <i class="arrow fa-solid fa-arrow-up"></i>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href=".." class="click-link"> Microsoft 365 </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/demandenligne.html" class="click-link"> Demande en ligne </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/alumni.html" class="click-link"> Alumni </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/inscription.html" class="click-link"> S'inscrire </a>
+                            </li>
+                            <li>
+                                <a href="../accueil/whattoknow.html" class="click-link"> Réglements </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-items">
+                        <a href="../contact/index.html" class="menu-items-link click-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-present" id="text">
+            <span> L'université des métiers </span>
+            <div style="background-color: #fff">
+                <p>
+                    L'établissement PIGIER CI est un établissement d'enseignement
+                    supérieur qui propose une gamme variée de programmes de formation
+                    professionnelle et technique en Côte d'Ivoire.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="frame">
+            <div id="video-controls"></div>
+            <video preload="metadata" id="present-video">
+                <source src="../static/videos/video_presentation_pigier.mp4" type="video/mp4">
+                </source>
+            </video>
+            <button id="play" style="display: flex; justify-content: center; align-items: center;">
+                <img src="../static/images/play.png" alt="" srcset="">
+            </button>
+            <button id="pause" style="display: none; justify-content: center; align-items: center;">
+                <img src="../static/images/pause.png" alt="" srcset="">
+            </button>
+        </div>
+
+        <div class="formation">
+            <span class="bloc-header">
+                <h3 style="letter-spacing: 0.1em; font-size: 28px">
+                    Découvrez nos formations
+                </h3>
+            </span>
+            <div class="formation-container">
+                <div class="btn-direction left" id="left">
+                    <i class="fa-solid fa-arrow-left arrow"></i>
+                </div>
+                <div class="sub-container">
+                    <section class="container-box">
+                        <div class="wrapper">
+                            <div class="img-pres">
+                                <img src="../static/images/genie-logiciel.jpeg" alt="Génie Logiciel" width="600"
+                                    height="350" />
+                            </div>
+                            <div class="box-desc">
+                                <span> Réseau & Génie Logiciel </span>
+                                <span class="btn-circle-redirect">
+                                    <a href="#">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container-box">
+                        <div class="img-pres">
+                            <img src="../static/images/comptabilite.jpeg" alt="Comptabilité" width="600" height="350" />
+                        </div>
+                        <div class="box-desc">
+                            <span> Comptabilité </span>
+                            <span class="btn-circle-redirect">
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+                <div class="sub-container">
+                    <section class="container-box">
+                        <div class="img-pres">
+                            <img src="../static/images/com-market.jpeg" alt="Communication & Marketing" width="600"
+                                height="350" />
+                        </div>
+                        <div class="box-desc">
+                            <span> Communication & Marketing </span>
+                            <span class="btn-circle-redirect">
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </section>
+                    <section class="container-box">
+                        <div class="img-pres">
+                            <img src="../static/images/entreprise-admin.jpeg"
+                                alt="Management & Administration des Entreprises" width="600" height="350" />
+                        </div>
+                        <div class="box-desc">
+                            <span> Management & Administration des Entreprises </span>
+                            <span class="btn-circle-redirect">
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+                <div class="more">
+                    <button style="
+                border: none;
+                padding: 15px 50px;
+                border: 1px solid #cfcfcf;
+                border-radius: 5px;
+                text-transform: uppercase;
+                color: #fff;
+                background: var(--blue);
+                font-size: 14px;
+                font-weight: 800;
+                letter-spacing: 0.2em;
+                margin: 10px 0;
+                cursor: pointer;
+              ">
+                        voir plus
+                    </button>
+                </div>
+                <div class="btn-direction right" id="right">
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Scholarvox</a></li>
+                        <li><a href="#">Accéder au portail FOAD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Entrer en Contact</h4>
+                    <ul>
+                        <li><a href="#">Contacter Pigier</a></li>
+                        <li><a href="#">Cartes et itinéraires</a></li>
+                        <li><a href="#">S'inscrire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-info">
+                    <p>&copy; 2023 Pigier Côte d'Ivoire. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#1" class="go-top">
+        <img src="../static/images/up-arrow-2.png" alt="" srcset="" />
+    </a>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../static/js/script.js"></script>
+
+</html>
